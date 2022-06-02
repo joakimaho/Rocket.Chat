@@ -56,7 +56,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v2
       - name: Cache turbo
         id: cache-turbo
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ./node_modules/.turbo
@@ -67,7 +67,7 @@ jobs:
 
       # TODO change to use turbo cache
       - name: Cache meteor local
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ./apps/meteor/.meteor/local
           key: ${{ runner.OS }}-meteor_cache-${{ hashFiles('apps/meteor/.meteor/versions') }}
@@ -75,7 +75,7 @@ jobs:
             ${{ runner.os }}-meteor_cache-
             ${{ runner.os }}-
       - name: Cache meteor
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.meteor
           key: ${{ runner.OS }}-meteor-${{ hashFiles('apps/meteor/.meteor/release') }}
@@ -208,7 +208,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v2
       - name: Cache turbo
         id: cache-turbo
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ./node_modules/.turbo
@@ -307,7 +307,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v2
       - name: Cache turbo
         id: cache-turbo
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ./node_modules/.turbo
@@ -410,7 +410,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v2
       - name: Cache turbo
         id: cache-turbo
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ./node_modules/.turbo
@@ -420,7 +420,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Cache meteor local
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ./apps/meteor/.meteor/local
           key: ${{ runner.OS }}-meteor_cache-${{ hashFiles('.meteor/versions') }}
@@ -428,7 +428,7 @@ jobs:
             ${{ runner.os }}-meteor_cache-
             ${{ runner.os }}-
       - name: Cache meteor
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.meteor
           key: ${{ runner.OS }}-meteor-${{ hashFiles('.meteor/release') }}
@@ -533,7 +533,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v2
       - name: Cache turbo
         id: cache-turbo
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ./node_modules/.turbo
@@ -786,7 +786,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v2
       - name: Cache turbo
         id: cache-turbo
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             ./node_modules/.turbo
